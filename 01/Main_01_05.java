@@ -11,7 +11,7 @@ public class Main_01_05 {
     
     char[] charArr = input.toCharArray();
     char[] answerArr = new char[charArr.length];
-    int[]  letterArr = input.chars().filter(Character::isLetter).toArray();
+    int[]  letterArr = input.chars().filter(Character::isAlphabetic).toArray();
     char c;
     int pos = letterArr.length;
     
@@ -24,7 +24,7 @@ public class Main_01_05 {
 
     for(int i = 0; i < charArr.length; i++) {
       c = charArr[i];
-      if(Character.isLetter(c)) {
+      if(Character.isAlphabetic(c)) {
         answerArr[i] = (char) letterArr[--pos];
         continue;
       }
@@ -37,8 +37,7 @@ public class Main_01_05 {
   // 직접 index를 따라가면서 바꾸기.
   static String anotherSolution(String input) {
     char[] charArr = input.toCharArray();
-    int lt = 0;
-    int rt = charArr.length - 1;
+    int lt = 0, rt = charArr.length - 1;
     char tmp;
 
     while(lt < rt) {
