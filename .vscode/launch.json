@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch Main_01_04",
+      "request": "launch",
+      "mainClass": "Main_01_04",
+      "projectName": "inflearn-coding-test_110e75db"
+    },
+    {
+      "type": "java",
       "name": "Launch Main_01_03",
       "request": "launch",
       "mainClass": "Main_01_03",
