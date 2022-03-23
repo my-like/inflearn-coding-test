@@ -9,6 +9,10 @@ public class Main_01_05 {
       return "";
     }
     
+    /** 
+     * Character.isAlphabeticc의 parameter는 int 여서 char를 넣으면 안 될 줄 알았는데,
+     * char를 넣으면 자동으로 char의 코드에 해당되는 숫자로 변형되서 적용됨.
+     * */ 
     char[] charArr = input.toCharArray();
     char[] answerArr = new char[charArr.length];
     int[]  letterArr = input.chars().filter(Character::isAlphabetic).toArray();
