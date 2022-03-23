@@ -14,9 +14,27 @@ public class Main_01_04 {
   }
 
   // String을 계속 생성하면 메모리를 많이 잡아먹으니까 StringBuilder 사용.
-  static String anotherSolution(String input) {
+  static String anotherSolution1(String input) {
     return new StringBuilder(input).reverse().toString();
   }
+  
+  // reverse 직접 구현하기
+  // s t u d y 에서 제일 왼쪽 s, 제일 오른쪽 y 를 바꾸며 한쪽식 안으로 들어가는 로직으로 한다..
+  static String anotherSolution2(String input) {
+    char[] charArr = input.toCharArray();
+    int lt = 0;
+    int rt = charArr.length - 1;
+    char tmp;
+
+    while(lt < rt) {
+      tmp = charArr[rt];
+      charArr[rt--] = charArr[lt];
+      charArr[lt++] = tmp;
+    }
+
+    return String.valueOf(charArr);
+  }
+  
   
   @SuppressWarnings("all")
   public static void main(String[] args){
@@ -33,7 +51,8 @@ public class Main_01_04 {
       }
 
       System.out.println(solution(s1)+"");
-      System.out.println(anotherSolution(s1)+"");
+      System.out.println(anotherSolution1(s1)+"");
+      System.out.println(anotherSolution2(s1)+"");
     }
     return ;
   }
