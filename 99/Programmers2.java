@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Programmers2 {
 
- 
+  // Level3 추석 트래픽
   static public void main(String[] args) {
 
     String[] lines = { "2016-09-15 01:00:04.002 2.0s", "2016-09-15 01:00:07.000 2s" };

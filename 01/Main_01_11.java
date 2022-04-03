@@ -37,7 +37,7 @@ public class Main_01_11 {
   }
 
   static int toDecimal(String binaryStr) {
-    int answer = 0;
+    // int answer = 0;
 
     for(int i = binaryStr.length() - 1; i >= 0; i--) {
       //answer += Integer.parseInt(binaryStr.charAt(i))
